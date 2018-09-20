@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Calculator
-//
-//  Created by Maxim Baranets on 20/09/2018.
-//  Copyright © 2018 Baranets. All rights reserved.
-//
-
 import UIKit
 
 class ViewController: UIViewController {
@@ -14,7 +6,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
 
 }
 
+//MARK: - различные изменения системных UI компонентов
+extension ViewController {
+    
+    override open var shouldAutorotate: Bool {
+        return false
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
+
+}
