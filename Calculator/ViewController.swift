@@ -4,6 +4,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var displayLabel: UILabel!
     
+    let errorMessage = "Ошибка"
+    
     var numberOnScreen: Double   = 0
     var previousNumber: Double   = 0
     var performMath:    Bool     = false
@@ -120,6 +122,10 @@ class ViewController: UIViewController {
         
         switch operation {
         case .devide:
+            guard numberOnScreen != 0 else {
+                displayLabel.text = errorMessage
+                return
+            }
             result = previousNumber / numberOnScreen
             
         case .multiply:
