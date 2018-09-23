@@ -130,7 +130,7 @@ class ViewController: UIViewController {
             
         case .multiply:
             result = previousNumber * numberOnScreen
-        
+            
         case .subtract:
             result = previousNumber - numberOnScreen
             
