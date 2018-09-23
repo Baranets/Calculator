@@ -74,11 +74,11 @@ class ViewController: UIViewController {
             numberOnScreen    = value
             performMath       = true
             
-        case 14: // ÷ (Devide) - оператор для деления числа на число
+        case 14: // ÷ (Divide) - оператор для деления числа на число
             guard let displayedNumberStringValue = displayLabel.text else {
                 return
             }
-            operation      = .devide
+            operation      = .divide
             previousNumber = Double(displayedNumberStringValue) ?? 0
             performMath    = true
             
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
         let result: Double?
         
         switch operation {
-        case .devide:
+        case .divide:
             guard numberOnScreen != 0 else {
                 displayLabel.text = errorMessage
                 return
