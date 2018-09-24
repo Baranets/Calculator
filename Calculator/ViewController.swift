@@ -38,6 +38,9 @@ class ViewController: UIViewController {
     
     ///Выполнение действий в соответстии с "tag" id
     @IBAction func options(_ sender: UIButton) {
+        if operation != .none {
+            doMath(operation: operation)
+        }
         
         switch sender.tag {
         case 10: // , (Comma) - оператор позволяющий получить число с плавающей запятой
@@ -151,10 +154,6 @@ class ViewController: UIViewController {
 
 //MARK: - Различные изменения системных UI компонентов
 extension ViewController {
-    
-    override open var shouldAutorotate: Bool {
-        return false
-    }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
