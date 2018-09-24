@@ -40,6 +40,7 @@ class ViewController: UIViewController {
     @IBAction func options(_ sender: UIButton) {
         if operation != .none {
             doMath(operation: operation)
+            operation = .none
         }
         
         switch sender.tag {
